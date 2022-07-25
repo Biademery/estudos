@@ -1,2 +1,2 @@
 # Discover
-Anotações das aulas da Rocketseat
+Anotações e exercícios das aulas da Rocketseat
