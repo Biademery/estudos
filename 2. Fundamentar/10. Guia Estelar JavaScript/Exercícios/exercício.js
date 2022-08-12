@@ -2,7 +2,8 @@
 let weight
 
 // 2. Que tipo de dado é a variável acima?
-    console.log(typeof weight)
+undefined
+console.log(typeof weight)
 
 /*
    3. Declare uma variável e atribua valores para cada um dos dados:
@@ -11,10 +12,10 @@ let weight
         * stars: Number (float)
         * isSubscribed: Boolean
 */
-    let name = "Ana"
-    let age = 22
-    let stars = 4.9
-    let isSubscribed = true
+let name = "Ana"
+let age = 22
+let stars = 4.9
+let isSubscribed = true
 
 /*
     4. A variável student abaixo é de que tipo de dados?
@@ -41,7 +42,7 @@ console.log(`${student.name} de idade ${student.age} pesa ${student.weight} kg`)
 /*
     5. Declare uma variável do tipo Array, de nome students e atribua a ela nunhum valor, ou seja, somente o Array vazio
 */
-    let student = []
+let student = []
 
 /*
     6. Reatribua valor para a variável acima, colocando dentro dela o objeto, mas usar o objeto criado e inserir ele no array
