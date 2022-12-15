@@ -197,7 +197,13 @@ const review = [
   'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.',
 ];
 
-const paragraphs = '';
+let paragraphs = '';
+
+const createParagraph = paragraph => {
+  paragraphs += `<p>${paragraph}</p>`;
+};
+
+review.forEach(createParagraph);
 
 section.innerHTML = paragraphs;
 
@@ -221,3 +227,22 @@ section.innerHTML = paragraphs;
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
 */
+
+const getLikeMessage = (names = []) => {
+  switch (names.length) {
+    case 0:
+      return 'Niguém curtiu isso';
+    case 1:
+      return `${names[0]} curtiu isso`;
+    case 2:
+      return `${names[0]} e ${names[1]} curtiram isso`;
+    case 3:
+      return `${names[0]}, ${names[1]} e ${names[2]} curtiram isso`;
+    default:
+      return `${names[0]}, ${names[1]} e mais ${
+        names.length - 2
+      } pessoas curtiram isso`;
+  }
+};
+
+console.log(getLikeMessage(['Bia', 'Arthur', 'Ana', 'André']));
