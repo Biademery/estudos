@@ -157,6 +157,3 @@ const myFunc = type => {
 console.log(myFunc('null'));
 console.log(myFunc('undefined'));
 console.log(myFunc('object'));
-
-/*
-  10
