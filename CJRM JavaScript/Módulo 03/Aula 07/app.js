@@ -4,9 +4,7 @@
 // };
 
 // arrow function
-const double = (number = 0) => {
-  return number * 2;
-};
+const double = (number = 0) => number * 2;
 
 // const double = (number = 0) => number * 2;
 

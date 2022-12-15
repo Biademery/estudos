@@ -15,12 +15,12 @@
     animals.";
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
-const animals = ["macaco", "tucano", "elefante", "pavão", "hipopótamo"];
+const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo'];
 
-if (!animals.includes("leão")) {
-  console.log("Leão não existe no array animals.");
+if (!animals.includes('leão')) {
+  console.log('Leão não existe no array animals.');
 } else {
-  console.log("Existe um leão no array animals.");
+  console.log('Existe um leão no array animals.');
 }
 
 /*
@@ -34,12 +34,17 @@ if (!animals.includes("leão")) {
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43];
+
 let sum = 0;
-let limit = 400;
+
+const limit = 400;
 
 for (i = 0; i < randomNumbers.length; i++) {
   if (sum > limit) {
-    console.log(`A soma ultrapassou ${limit}. Até aqui, o valor atual é ${sum}.`);
+    console.log(
+      `A soma ultrapassou ${limit}. Até aqui, o valor atual é ${sum}.`,
+    );
+
     break;
   }
 
@@ -56,11 +61,21 @@ console.log(sum);
     concatenada;
   - Exiba a frase no console.
 */
-const sentence = ["A", "certeza", "dúvida", "é", "o", "princípio", "da", "sabedoria."];
-let newSentence = "";
+const sentence = [
+  'A',
+  'certeza',
+  'dúvida',
+  'é',
+  'o',
+  'princípio',
+  'da',
+  'sabedoria.',
+];
+
+let newSentence = '';
 
 for (i = 0; i < sentence.length; i++) {
-  if (sentence[i] === "certeza") {
+  if (sentence[i] === 'certeza') {
     continue;
   }
   newSentence += `${sentence[i]} `;
@@ -84,26 +99,29 @@ console.log(newSentence);
 const randomValues = [
   57,
   false,
-  "JS",
+  'JS',
   [],
   true,
-  "HTML",
+  'HTML',
   31,
   null,
   false,
-  "CSS",
+  'CSS',
   97,
   true,
-  "Git",
+  'Git',
   11,
-  "sticker",
+  'sticker',
   false,
-  "GitHub",
+  'GitHub',
   true,
   null,
 ];
+
 let stringsAmount = 0;
-let firstFourStrings = [];
+
+const firstFourStrings = [];
+
 let booleansAmount = [];
 let totalIterations = 0;
 
@@ -112,12 +130,12 @@ for (let i = 0; i < randomValues.length; i++) {
     break;
   }
 
-  if (typeof randomValues[i] === "string") {
+  if (typeof randomValues[i] === 'string') {
     stringsAmount++;
     firstFourStrings.push(randomValues[i]);
   }
 
-  if (typeof randomValues[i] === "boolean") {
+  if (typeof randomValues[i] === 'boolean') {
     booleansAmount++;
   }
 
@@ -127,7 +145,7 @@ const lastItem = firstFourStrings[firstFourStrings.length - 1];
 
 console.log(`3 informações sobre o array randomValues:
   - As primeiras 4 strings são ${firstFourStrings
-    .join(", ")
+    .join(', ')
     .replace(`, ${lastItem}`, ` e ${lastItem}`)};
   - Até que as primeiras 4 strings fossem iteradas, ${booleansAmount} booleans foram iterados;
   - O array foi iterado por ${totalIterations} vezes.`);
@@ -151,24 +169,26 @@ console.log(`3 informações sobre o array randomValues:
   - Exiba a mensagem no console. Teste também as outras possibilidades de tipo  
     da bebida além da que você escolheu.
 */
-const drinkType = "refrigerante";
+const drinkType = 'refrigerante';
 
 switch (drinkType) {
-  case "água":
+  case 'água':
     console.log(
-      "Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio."
+      'Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.',
     );
+
     break;
-  case "refrigerante":
+  case 'refrigerante':
     console.log(
-      "Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar."
+      'Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.',
     );
+
     break;
-  case "suco":
-    console.log("Bebida produzida do líquido extraído de frutos.");
+  case 'suco':
+    console.log('Bebida produzida do líquido extraído de frutos.');
     break;
   default:
-    console.log("Bebida desconhecida.");
+    console.log('Bebida desconhecida.');
 }
 
 /*

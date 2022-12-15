@@ -1,7 +1,7 @@
-const name = "Roger";
+const name = 'Bia';
 
 // funções
-const sayHi = () => "Oi";
+const sayHi = () => 'Oi';
 
 const greet = sayHi();
 console.log(greet);

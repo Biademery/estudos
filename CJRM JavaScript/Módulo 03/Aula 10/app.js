@@ -2,11 +2,11 @@
 
 const ul = document.querySelector("[data-js='ul']");
 
-const socialNetworks = ["youtube", "twitter", "instagram", "facebook"];
+const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
 
-let HTMLTemplate = "";
+let HTMLTemplate = '';
 
-socialNetworks.forEach((socialNetworks) => {
+socialNetworks.forEach(socialNetworks => {
   HTMLTemplate += `<li style="color: deeppink;">${socialNetworks}</li>`;
 });
 

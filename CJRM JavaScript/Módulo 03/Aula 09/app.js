@@ -9,7 +9,7 @@
 //     console.log(number)
 // });
 
-const socialNetworks = ["youtube", "twitter", "instagram", "facebook"];
+const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook'];
 
 const logArrayInfo = (socialNetworks, index, array) => {
   console.log(index, socialNetworks, array);

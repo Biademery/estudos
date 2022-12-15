@@ -56,25 +56,25 @@ const division = function (number1 = 0, number2 = 1) {
     função.
 */
 const millennialWords = [
-  "lol",
-  "yolo",
-  "troll",
-  "stalkear",
-  "selfie",
-  "influencer",
-  "crush",
-  "fitness",
-  "hater",
-  "bae",
-  "random",
-  "kawaii",
-  "outfit",
-  "mood",
-  "fail",
+  'lol',
+  'yolo',
+  'troll',
+  'stalkear',
+  'selfie',
+  'influencer',
+  'crush',
+  'fitness',
+  'hater',
+  'bae',
+  'random',
+  'kawaii',
+  'outfit',
+  'mood',
+  'fail',
 ];
 
 const upperCase = function (array = []) {
-  let newArray = [];
+  const newArray = [];
 
   for (i = 0; i < array.length; i++) {
     newArray.push(array[i].toUpperCase());
@@ -121,7 +121,7 @@ for (i = 0; i < randomNumbers.length; i++) {
     função.
 */
 const getOddNumbers = function (numbers = []) {
-  let newArray = [];
+  const newArray = [];
 
   for (i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 !== 0) {
@@ -141,92 +141,92 @@ const getOddNumbers = function (numbers = []) {
 
 const functions = [
   function () {
-    return "Plymouth";
+    return 'Plymouth';
   },
   function () {
-    return "é";
+    return 'é';
   },
   function () {
-    return "uma";
+    return 'uma';
   },
   function () {
-    return "cidade";
+    return 'cidade';
   },
   function () {
-    return "fantasma";
+    return 'fantasma';
   },
   function () {
-    return "localizada";
+    return 'localizada';
   },
   function () {
-    return "na";
+    return 'na';
   },
   function () {
-    return "ilha";
+    return 'ilha';
   },
   function () {
-    return "de";
+    return 'de';
   },
   function () {
-    return "Montserrat,";
+    return 'Montserrat,';
   },
   function () {
-    return "um";
+    return 'um';
   },
   function () {
-    return "território";
+    return 'território';
   },
   function () {
-    return "ultramarino";
+    return 'ultramarino';
   },
   function () {
-    return "do";
+    return 'do';
   },
   function () {
-    return "Reino";
+    return 'Reino';
   },
   function () {
-    return "Unido";
+    return 'Unido';
   },
   function () {
-    return "localizado";
+    return 'localizado';
   },
   function () {
-    return "na";
+    return 'na';
   },
   function () {
-    return "cadeia";
+    return 'cadeia';
   },
   function () {
-    return "de";
+    return 'de';
   },
   function () {
-    return "Ilhas";
+    return 'Ilhas';
   },
   function () {
-    return "de";
+    return 'de';
   },
   function () {
-    return "Sotavento";
+    return 'Sotavento';
   },
   function () {
-    return "nas";
+    return 'nas';
   },
   function () {
-    return "Pequenas";
+    return 'Pequenas';
   },
   function () {
-    return "Antilhas,";
+    return 'Antilhas,';
   },
   function () {
-    return "Índias";
+    return 'Índias';
   },
   function () {
-    return "Ocidentais.";
+    return 'Ocidentais.';
   },
 ];
 
-let sentence = "";
+let sentence = '';
 
 for (i = 0; i < functions.length; i++) {
   sentence += `${functions[i]()} `;
