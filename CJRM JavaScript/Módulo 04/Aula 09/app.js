@@ -5,8 +5,8 @@ const user = {
   email: 'chavez@gmail.com',
   city: 'São Paulo',
   blogPosts: [
-    {title: 'Empadão de frnago', likes: 30},
-    {title:'4 receitas de purê de batata', likes: 50}
+    { title: 'Empadão de frnago', likes: 30 },
+    { title: '4 receitas de purê de batata', likes: 50 },
   ],
   login() {
     console.log('Usuário logado');
