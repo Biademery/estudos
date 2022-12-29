@@ -9,9 +9,9 @@ button.addEventListener('click', () => {
 });
 
 ul.addEventListener('click', event => {
-  const clickedElement = event.target
+  const clickedElement = event.target;
 
-  if(clickedElement.tagName === 'LI') {
-    clickedElement.remove()
+  if (clickedElement.tagName === 'LI') {
+    clickedElement.remove();
   }
-})
+});
