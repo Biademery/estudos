@@ -21,33 +21,45 @@
   Dica: pesquise pelo método "insertAdjacentElement", no MDN;
 */
 const input = document.querySelector('#username');
+const form = document.querySelector('form');
+const button = document.querySelector('button');
+
+const usernameRegex = /^[a-zA-Z]{6,}$/;
+
+const p = document.createElement('p');
 
 input.addEventListener('keyup', event => {
   const inputValue = event.target.value;
-  const usernameRegex = /^[a-zA_Z]{6,}$/;
-
-  const p = document.createElement('p');
-  p.setAttribute('data-feedback', 'username-feedback');
-
-  const feedbackParagraph = document.querySelector(
-    '[datafeedback="username-feedback"',
-  );
-
-  if (feedbackParagraph) {
-    feedbackParagraph.remove();
-  }
 
   if (!usernameRegex.test(inputValue)) {
     p.textContent =
       'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas';
 
-    p.setAttribute('class', 'usermane-help-feedback');
+    p.setAttribute('class', 'username-help-feedback');
     event.target.insertAdjacentElement('afterend', p);
+    return;
   }
 
   p.textContent = 'Username Válido =)';
-  p.setAttribute('class', 'usermane-success-feedback');
+  p.setAttribute('class', 'username-success-feedback');
   event.target.insertAdjacentElement('afterend', p);
+});
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const inputValue = input.value;
+
+  if (!usernameRegex.test(inputValue)) {
+    p.textContent = 'Por favor, insira um username válido';
+    p.setAttribute('class', 'submit-help-feedback');
+    button.insertAdjacentElement('afterend', p);
+    return;
+  }
+
+  p.textContent = 'Dados enviados =)';
+  p.setAttribute('class', 'submit-success-feedback');
+  button.insertAdjacentElement('afterend', p);
 });
 
 /*
@@ -82,3 +94,16 @@ input.addEventListener('keyup', event => {
   Spoiler alert: este tipo de exercício será frequente em etapas mais avançadas  
   do curso, onde falaremos sobre TDD. Vá se aquecendo =D
 */
+
+const some = (array, func) => {
+  for (let i = 0; i < array.length; i++) {
+    if (func(array[i])) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+console.log(some([1, 2, 3], item => item === 2));
+console.log(some([4, 5, 6], item => item === 3));
