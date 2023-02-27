@@ -1,5 +1,5 @@
 //  for loop
-const names = ["Linus", "Ada", "Bill"];
+const names = ['Linus', 'Ada', 'Bill'];
 
 for (let i = 0; i < names.length; i++) {
   const HTMLTemplate = `<p>${names[i]}</p> `;
@@ -7,4 +7,4 @@ for (let i = 0; i < names.length; i++) {
   console.log(HTMLTemplate);
 }
 
-console.log("Loop concluído");
+console.log('Loop concluído');
