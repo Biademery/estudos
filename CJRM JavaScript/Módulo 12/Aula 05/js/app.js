@@ -7,6 +7,5 @@ cityForm.addEventListener('subimt', async event => {
   const [{ Key, localizedName }] = await getCityData(inputValue);
   const [{ WeatherText, Temperature }] = await getCityWeather(Key);
 
-  console.log(Key, localizedName);
   cityForm.reset();
 });
