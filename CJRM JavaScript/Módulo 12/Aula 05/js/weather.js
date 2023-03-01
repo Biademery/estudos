@@ -19,10 +19,10 @@ const getCityData = async cityName => {
   }
 };
 
-const getCityWeather = async cityName => {
+const getCityWeather = async cityKey => {
   try {
-    const { Key } = await getCityData(cityName);
-    const cityWeatherURL = `http://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${APIKey}&language=pt-br`;
+    const { Key } = await getCityData(cityKey);
+    const cityWeatherURL = `http://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${APIKey}&language=pt-br`;
     const response = await fetch(cityWeatherURL);
 
     if (!response.ok) {
@@ -35,5 +35,3 @@ const getCityWeather = async cityName => {
     alert(`${name}: ${message}`);
   }
 };
-
-getCityData('São Paulo');
