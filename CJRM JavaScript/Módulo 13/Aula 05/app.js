@@ -1,12 +1,12 @@
-localStorage.setItem('name', 'Bia');
-localStorage.setItem('age', 23);
+const myArray = [
+  { a: 1, b: 2 },
+  { c: 3, d: 4 },
+  { e: 5, f: 6 },
+];
 
-let name = localStorage.getItem('name');
-let age = localStorage.getItem('age');
+localStorage.setItem('myArray', JSON.stringify(myArray));
 
-console.log(name, age);
+const JSONFromLocalStorage = localStorage.getItem('myArray');
+const myConvertedArray = JSON.parse(JSONFromLocalStorage);
 
-localStorage.clear();
-
-name = localStorage.getItem('name');
-age = localStorage.getItem('age');
+console.log(myConvertedArray);
