@@ -22,7 +22,8 @@
     <p>Result: {{ counter }}</p>
     <input type="text" v-model="name">
     <button @click="resetButton">Reset Input</button>
-    <p>Your Name: {{ name }}</p>
+    <p>Your Name: {{ outputFullname() }}</p>
+    <!-- isn't the best solution using method to output -->
   </section>
 </body>
 

@@ -16,6 +16,12 @@ const app = Vue.createApp({
     reduceButton(number) {
       this.counter -= number;
     },
+    outputFullname() {
+      if (this.name === '') {
+        return '';
+      }
+      return `${this.name} Demery`;
+    },
   },
 });
 
