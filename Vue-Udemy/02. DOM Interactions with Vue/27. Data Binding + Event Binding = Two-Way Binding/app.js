@@ -16,7 +16,9 @@ const app = Vue.createApp({
     reduceButton(number) {
       this.counter -= number;
     },
-    outputFullname() {
+  },
+  computed: {
+    fullname() {
       if (this.name === '') {
         return '';
       }
