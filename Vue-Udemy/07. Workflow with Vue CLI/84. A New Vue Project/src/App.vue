@@ -2,13 +2,16 @@
     <div>
         <h2>My Friends</h2>
         <ul>
-            <li></li>
+            <friend-contact></friend-contact>
+            <friend-contact></friend-contact>
         </ul>
     </div>
 </template>
 
 <script>
+import FriendContact from './components/FriendContact.vue';
 export default {
+    components: { FriendContact },
     data() {
         return {
             friends: [
