@@ -5,9 +5,14 @@
       <div>
         <base-button @click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
-      <ul>
-        <survey-result v-for="result in results" :key="result.id" :name="result.name"
-          :rating="result.rating"></survey-result>
+      <p v-if="isLoading">Loading...</p>
+      <ul v-else>
+        <survey-result
+          v-for="result in results"
+          :key="result.id"
+          :name="result.name"
+          :rating="result.rating"
+        ></survey-result>
       </ul>
     </base-card>
   </section>
@@ -23,10 +28,12 @@ export default {
   data() {
     return {
       results: [],
+      isLoading: false
     };
   },
   methods: {
     loadExperiences() {
+      this.isLoading = true;
       fetch('https://vue-http-demo-85e9e.firebaseio.com/surveys.json')
         .then((response) => {
           if (response.ok) {
@@ -34,6 +41,7 @@ export default {
           }
         })
         .then((data) => {
+          this.isLoading = false;
           const results = [];
           for (const id in data) {
             results.push({
@@ -45,10 +53,10 @@ export default {
           this.results = results;
         });
     },
-    mounted() {
-      this.loadExperiences()
-    }
   },
+  mounted() {
+    this.loadExperiences();
+  }
 };
 </script>
 
