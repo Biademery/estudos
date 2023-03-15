@@ -1,14 +1,14 @@
 const carro = {
-    doors: 4,
-    color: "Vermelho",
+  doors: 4,
+  color: "Vermelho",
 };
 
 if (carro.doors > 2) {
-    console.log('O Carro tem mais que duas portas')
+  console.log("O Carro tem mais que duas portas");
 }
 
 const pessoa = {
-    name: "Bia",
+  name: "Bia",
 };
 
-console.log(carro.color, carro.doors, pessoa.name)
+console.log(carro.color, carro.doors, pessoa.name);
